@@ -21,17 +21,19 @@ public class Fontana_5_number_guessing_game {
         Scanner scan = new Scanner(System.in);
         Random = new Random();
         magicnumber = (Random.nextInt(9)+1);
-        
-        while (playagain = true){
+        Scanner name = new Scanner(System.in);
+        System.out.println("What is your name?");
+            username = name.nextLine();
+        while (playagain == true){
             playthegame();
         }
     }
     public static void playthegame() {
-        if (tries == 3) {
+        if (tries == 4) {
             System.out.println("You ran out of tries! Game Over");
+            System.out.println("The number you failed to get was " + magicnumber);
             playagain = false;
         } else {
-            Scanner name = new Scanner(System.in);
             Scanner guess = new Scanner(System.in);
             System.out.println("Hello " + username + " please pick a number between 1 and 10.");
             yourguess = guess.nextInt();
