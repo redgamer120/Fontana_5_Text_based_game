@@ -1,8 +1,3 @@
-/*
-                if (Hp<0){
-                    StartGame();
-                }
- */
 package fontana_5_text_based_game;
 import java.util.Scanner;
 import java.util.Random;
@@ -46,6 +41,11 @@ public class Fontana_5_text_based_game {
     static int Ewis;
     static int Edef;
     
+    
+     public static void main(String[] args) {
+       StartGame();
+    }
+    
     public static void StartGame() {
         Rhp = new Random ();
         Hp = Rhp.nextInt(101)+1;
@@ -86,9 +86,9 @@ public class Fontana_5_text_based_game {
         if (type.contains("w")) {
             System.out.println("You find yourself in a weird armory.");
             System.out.println("What weapon(s) do you pick up");
-            System.out.println("1 Sword and sheild(averge defense, attack, and agillity)");
-            System.out.println("2 Lond sword(high attack, minamal defense, and normal agillity)");
-            System.out.println("3 Lance and sheild(high attack, high defence, and low agillity)");
+            System.out.println("#1 Sword and sheild(averge defense, attack, and agillity)");
+            System.out.println("#2 Lond sword(high attack, minamal defense, and normal agillity)");
+            System.out.println("#3 Lance and sheild(high attack, high defence, and low agillity)");
             Scanner Weapon = new Scanner(System.in);
             weapon = Weapon.nextLine();
             if  (weapon.contains("1")) {
